@@ -1,43 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Amazon Sign-In</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sign In</title>
     <style>
-        #div1 {
-  background-color: white;
-  color:black;
-  width: 300px;
-  border: 2px solid grey;
-  padding: 5px;
-  margin: 20px;
-}
-       
+        
+        body, h1, form {
+            margin: 0;
+            padding: 0;
+        }
+
+         
+        body {
+            background-color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+         
+        .container {
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+         
+        .logo img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+         .signin-form form {
+            text-align: left;
+        }
+
+         label {
+            font-weight: bold;
+        }
+
+         input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+         a[href="#"] {
+            display: block;
+            text-align: right;
+            margin-top: -15px;
+            margin-bottom: 10px;
+        }
+
+         .signin-button {
+            background-color: #ff9900;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .signin-button:hover {
+            background-color: #ff6600;
+        }
+
+         .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+         .copyright {
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
-    
-    <div id="div1">
-      <h2>Sign In</h2>
-      <p>Email(phone or mobile accounts)</p>
-      <input type="text" placeholder="Enter Email"></input>
-      <pre>Password    <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GH3NM2YWEFEL2CQ4">Forgot Password</a></pre>
-      
-      <input type="password" placeholder="Enter Password">
-      <pre><button style="background-color:yellow;">       Continue       </button></pre>
+    <div class="container">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2500px-Amazon_icon.svg.png" alt="Amazon Logo">  
+        </div>
+        <div class="signin-form">
+            <h1>Sign-In</h1>
+            <form>
+                <label for="email">Email or mobile phone number</label>
+                <input type="text" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <a href="#">Forgot your password?</a>
+                <button type="button" class="signin-button">Sign In</button>
+                <div class="divider">New to Amazon?</div>
+                <a href="#">Create your Amazon account</a>
+            </form>
+        </div>
     </div>
-    
-    <div id="div1">
-    <h4>------New to Amazon?-----</h4>
-    <button>Create your amazon account</button>
+    <div class="footer">
+        <div class="footer-links">
+            <a href="#">Conditions of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Help</a>
+        </div>
+        <p class="copyright">&#169; 1996-2020 Amazon Inc. and its associates</p>
     </div>
-
-    <div>
-        <pre> <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM">conditions of use</a> <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ">privacy policy</a> <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508510">help</a> </pre>
-        <p>© 1996-2020. Amazon.com inc or its affiliates.</p>
-    </div>
-
-
-    
-
 </body>
 </html>
